@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html, body, #root, #root > div {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #111827;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.game-title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  color: white;
+}
+
+.message-box {
+  font-weight: bold;
+  height: 1.5rem;
+  text-align: center;
+}
+
+.message-text {
+  font-size: 1.25rem;
+  transition: opacity 0.3s;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 48rem;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.input {
+  flex: 1;
+  max-width: 24rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #1F2937;
+  color: white;
+  border: 1px solid #4B5563;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input::placeholder {
+  color: #9CA3AF;
+}
+
+.input:focus {
+  border-color: #3B82F6;
+}
+
+.button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #3B82F6;
+  transition: background-color 0.2s;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.new-game-button {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-game-icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.grid-container {
+  width: 100%;
+  max-width: 40rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.grid-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #374151;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 0.75rem;
+  font-weight: bold;
+  color: #D1D5DB;
+  border-bottom: 1px solid #4B5563;
+}
+
+.grid-header-cell {
+  flex: 1;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.grid-header-elixir-cell {
+  width: 6rem;
+  text-align: center;
+}
+
+.grid-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1F2937;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.grid-card-name {
+  flex: 1;
+  text-align: left;
+  font-weight: 600;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.grid-elixir {
+  width: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 9999px;
+  padding: 0.25rem;
+}
+
+.grid-type {
+  width: 6rem;
+  font-weight: bold;
+  border-radius: 9999px;
+  padding: 0.25rem;
+}
+
+.grid-elixir.correct, .grid-type.correct {
+  color: #4ADE80;
+}
+
+.grid-elixir.incorrect, .grid-type.incorrect {
+  color: #F87171;
+}
+
+.icon {
+  height: 1rem;
+  width: 1rem;
+  margin-left: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .game-title {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .message-box {
+    height: 2rem;
+  }
+}
