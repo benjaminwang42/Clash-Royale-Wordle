@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div>
-        <BrowserRouter>
+        <BrowserRouter basename="/Clash-Royale-Worldle">
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
